@@ -5,11 +5,11 @@ public class LoginPage {
 
     WebDriver driver;
 
-    private By buttonSingIn = By.name("signin");
-    private By textLogin = By.name("username");
-    private By textPassword = By.name("password");
-    private By buttonLogIn = By.name("login");
-    private By headIn = By.className("modal-title");
+    private final By buttonSingIn = By.name("signin");
+    private final By textLogin = By.name("username");
+    private final By textPassword = By.name("password");
+    private final By buttonLogIn = By.name("login");
+    private final By headIn = By.className("modal-title");
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;

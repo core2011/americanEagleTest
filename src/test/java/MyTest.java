@@ -5,7 +5,7 @@ import org.openqa.selenium.safari.SafariDriver;
 import java.time.Duration;
 
 
-public class LogInTest {
+public class MyTest {
 
     private WebDriver driver;
     private MainShopPage mainShopPage;
@@ -37,8 +37,29 @@ public class LogInTest {
         Assert.assertEquals(hidingTitle, title);
     }
 
+    @Test
+    public void testFindProduct() throws InterruptedException {
+        String find = "t-shirt";
+        boolean allMatch = mainShopPage
+                .findProduct()
+                .enterProduct(find)
+                .checkResult(find);
+        System.out.println(allMatch);
+//        Assert.assertTrue("true", allMatch);  ??????????
+    }
+
+    @Test
+    public void putProductInBin() throws InterruptedException {
+        mainShopPage
+                .clickButtonManShop()
+                .choiceProduct()
+                .choiceSize();
+    }
+
+
+
     @After
     public void tearDown(){
-        driver.quit();
+//        driver.quit();
     }
 }
