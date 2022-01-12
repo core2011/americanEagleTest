@@ -16,9 +16,10 @@ public class PageProduct {
     public PageProduct choiceSize(){
         Actions action = new Actions(driver);
 
-        action.moveToElement( driver.findElement(buttonChoiceSize)).perform();
+        action.moveToElement(driver.findElement(buttonChoiceSize)).perform();
         driver.findElement(buttonChoiceSize).click();
         driver.findElement(By.xpath("//*[@id=\"dropdown-ember921\"]/li[1]/a")).click();
+
         return this;
     }
 

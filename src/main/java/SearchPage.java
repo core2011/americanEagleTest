@@ -13,8 +13,8 @@ public class SearchPage {
         this.driver = driver;
     }
 
-    public PageAfterFind enterProduct(String find){
-        driver.findElement(textFind).sendKeys(find);
+    public PageAfterFind enterProduct(String quary){
+        driver.findElement(textFind).sendKeys(quary);
         driver.findElement(textFind).sendKeys(Keys.ENTER);
         return new PageAfterFind(driver);
     }

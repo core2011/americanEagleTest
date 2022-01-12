@@ -1,5 +1,7 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public class LoginPage {
 
@@ -9,7 +11,8 @@ public class LoginPage {
     private final By textLogin = By.name("username");
     private final By textPassword = By.name("password");
     private final By buttonLogIn = By.name("login");
-    private final By headIn = By.className("modal-title");
+    private final By headIn = By.xpath("//div[@class='modal-dialog']//*[.=\"sasha's Account\"]");
+
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
